@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Sonidos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<input type="text" id="userInput"></input>
+<button onclick="test()">Submit</button>
+
+<!-- add this line for function to write into -->
+<p id="demo"></p>   
+
+<button id="bt" type="button" name="button1" value="A minor" 
+  onclick="javascript:PlaySound('sounds/Am.wav');">
+  A minor
+</button>
+
+<button id="bt" type="button" name="button2" value="B minor" 
+  onclick="javascript:PlaySound('sounds/Bm.wav');">
+  B minor
+</button>
+
+<h1>Switch statements</h1>
+
+<p id="message"></p>
+
+<script type="text/javascript">
+  function PlaySound(path) {
+  var audioElement = document.createElement('audio');
+  audioElement.setAttribute('src', path);
+  audioElement.play();
+}
+</script>
+
+</body>
+</html>
